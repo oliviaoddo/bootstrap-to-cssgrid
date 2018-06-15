@@ -1,1 +1,13 @@
 /* CSS Grid css here */
+
+.hero-grid {
+  display: grid;
+  position: relative;
+  grid-row-gap: 3rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
