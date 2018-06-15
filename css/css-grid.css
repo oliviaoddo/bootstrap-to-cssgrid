@@ -4,10 +4,41 @@
   display: grid;
   position: relative;
   grid-row-gap: 3rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 0.9375rem 1fr 0.9375rem;
+  grid-template-areas:
+    '. hero-title .'
+    ' . hero-form .';
+}
+
+#hero-form {
+  grid-area: hero-form;
+}
+
+#hero-title {
+  grid-area: hero-title;
 }
 
 .form-grid {
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 10px;
+}
+
+@media (min-width: 500px) {
+  .hero-grid {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .hero-grid {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-grid {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }

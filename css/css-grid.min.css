@@ -1,0 +1,1 @@
+.hero-grid{display:grid;position:relative;grid-row-gap:3rem}.form-grid{display:grid;grid-auto-flow:column;grid-column-gap:10px}@media (max-width:1000px){.hero-grid{max-width:900px}}
