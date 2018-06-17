@@ -1,5 +1,7 @@
 /* CSS Grid css here */
 
+/* Masthead Section */
+
 .hero-grid {
   display: grid;
   position: relative;
@@ -21,8 +23,7 @@
 
 .form-grid {
   display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 10px;
+  grid-row-gap: 0.5rem;
 }
 
 @media (min-width: 500px) {
@@ -35,10 +36,19 @@
   .hero-grid {
     grid-template-columns: 1fr 3fr 1fr;
   }
+
+  .form-grid {
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    grid-template-columns: 3fr 1fr;
+  }
 }
 
 @media (min-width: 1500px) {
   .hero-grid {
     grid-template-columns: 1fr 2fr 1fr;
+  }
+  .form-grid {
+    grid-template-columns: 4fr 1fr;
   }
 }
