@@ -32,6 +32,13 @@
   display: grid;
 }
 
+/* Image Showcases */
+
+.images-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+
 /** Responsive **/
 
 @media (min-width: 500px) {
@@ -66,6 +73,39 @@
   .icons-grid {
     grid-template-columns: 1.5rem repeat(3, 1fr) 1.5rem;
     grid-template-areas: '. left middle right .';
+  }
+
+  .phone-img {
+    grid-area: phone-img;
+  }
+
+  .responsive-txt {
+    grid-area: responsive-txt;
+  }
+
+  .code-img {
+    grid-area: code-img;
+  }
+
+  .updated-txt {
+    grid-area: updated-txt;
+  }
+
+  .man-img {
+    grid-area: man-img;
+  }
+
+  .customize-txt {
+    grid-area: customize-txt;
+  }
+
+  .images-grid {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'responsive-txt phone-img'
+      'code-img updated-txt'
+      'customize-txt man-img';
   }
 }
 
