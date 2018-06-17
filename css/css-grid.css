@@ -26,7 +26,7 @@
   grid-row-gap: 0.5rem;
 }
 
-/** Icons Grid **/
+/* Icons Grid */
 
 .icons-grid {
   display: grid;
@@ -39,7 +39,13 @@
   grid-template-rows: repeat(5, 1fr);
 }
 
-/** Responsive **/
+/* Testimonials */
+
+.testimonals-grid {
+  display: grid;
+}
+
+/* Responsive */
 
 @media (min-width: 500px) {
   .hero-grid {
@@ -109,6 +115,32 @@
   }
 }
 
+@media (min-width: 1000px) {
+  .testimonals-grid {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    grid-template-areas:
+      '. heading-txt  heading-txt heading-txt  .'
+      '. margaret fred sarah .';
+  }
+
+  .heading-txt {
+    grid-area: heading-txt;
+  }
+
+  .margaret {
+    grid-area: margaret;
+  }
+
+  .fred {
+    grid-area: fred;
+  }
+
+  .sarah {
+    grid-area: sarah;
+  }
+}
+
 @media (min-width: 1500px) {
   .hero-grid {
     grid-template-columns: 1fr 2fr 1fr;
@@ -118,5 +150,9 @@
   }
   .icons-grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .testimonals-grid {
+    grid-template-columns: 2fr repeat(3, 1fr) 2fr;
   }
 }
